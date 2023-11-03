@@ -1,8 +1,8 @@
 class LinearEquation {
-    private int x1;
-    private int x2;
-    private int y1;
-    private int y2;
+    private double x1;
+    private double x2;
+    private double y1;
+    private double y2;
 
     private String cord1;
 
@@ -11,8 +11,8 @@ class LinearEquation {
 
     private double slope;
 
-    private int denom;
-    private int numer;
+    private double denom;
+    private double numer;
 
     private String slopeDefiner = "normal";
 
@@ -26,10 +26,10 @@ class LinearEquation {
         String temp3 = cord2.substring(1, cord2.indexOf(','));
         String temp4 = cord2.substring(cord2.indexOf(',') + 1, cord2.indexOf(')'));
 
-        x1 = Integer.parseInt(temp1);
-        y1 = Integer.parseInt(temp2);
-        x2 = Integer.parseInt(temp3);
-        y2 = Integer.parseInt(temp4);
+        x1 = (int) ((Integer.parseInt(temp1) * 100) + 0.5) / 100.0;
+        y1 = (int) ((Integer.parseInt(temp1) * 100) + 0.5) / 100.0;
+        x2 = (int) ((Integer.parseInt(temp1) * 100) + 0.5) / 100.0;
+        y2 = (int) ((Integer.parseInt(temp1) * 100) + 0.5) / 100.0;
 
         denom = (x2 - x1);
         numer = (y2 - y1);
